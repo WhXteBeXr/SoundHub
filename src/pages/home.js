@@ -3,21 +3,12 @@ import { SectionDivider } from '@/components/sectionDivider.js';
 import { AppForPreview } from '@/components/appForShowcase.js';
 import { Card } from '@/components/card.js';
 import { NavBar } from '@/components/navBar.js';
+import { PHRASES as motivationPhrases } from '@/data/phrases.js';
 
-const cardBottomPositionClass = 'apps-showcase__card--bottom-caption';
-const cardTopPositionClass = 'apps-showcase__card--top-caption';
-const appCaptionRightPositionClass = 'app__caption--right-side-caption';
-const appCaptionLeftPositionClass = 'app__caption--left-side-caption';
-
-const motivationPhrases = [
-  'Test motivation phrase',
-  'You\'re the best',
-  'You can do it!',
-];
-
-function chooseRandomPhrase(phrases) {
-  return phrases[Math.floor(Math.random() * phrases.length)];
-}
+const cardBottomPosition = 'apps-showcase__card--bottom-caption';
+const cardTopPosition = 'apps-showcase__card--top-caption';
+const appCaptionRightPosition = 'app__caption--right-side-caption';
+const appCaptionLeftPosition = 'app__caption--left-side-caption';
 
 export function HomePage() {
   console.info(`Вызвана функция ${HomePage.name}`);
@@ -35,19 +26,19 @@ export function HomePage() {
     <main>
       ${NewsList()} 
       <section class='apps-cards-showcase'>
-        ${Card(cardBottomPositionClass)}
-        ${Card(cardTopPositionClass)}
-        ${Card(cardBottomPositionClass)}
+        ${Card(cardBottomPosition)}
+        ${Card(cardTopPosition)}
+        ${Card(cardBottomPosition)}
       </section>
-      ${SectionDivider(chooseRandomPhrase(motivationPhrases))}
+      ${SectionDivider(motivationPhrases)}
       
       <section class='apps-preview-block'>
-        ${AppForPreview(appCaptionRightPositionClass)}
-        ${AppForPreview(appCaptionLeftPositionClass)}
-        ${AppForPreview(appCaptionRightPositionClass)}
+        ${AppForPreview(appCaptionRightPosition)}
+        ${AppForPreview(appCaptionLeftPosition)}
+        ${AppForPreview(appCaptionRightPosition)}
       </section>
       
-      ${SectionDivider(chooseRandomPhrase(motivationPhrases))}
+      ${SectionDivider(motivationPhrases)}
     </main>
     
     <footer class='footer'>
