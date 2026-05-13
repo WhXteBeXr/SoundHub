@@ -3,5 +3,5 @@ export function SectionDivider(motivationPhrase) {
     <div class='section-divider'>
       <p class='section-divider__motivation-phrase'>${motivationPhrase}</p>
     </div>
-  `
+  `;
 }

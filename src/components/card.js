@@ -4,5 +4,5 @@ export function Card(captionPosition) {
       <img class='apps-showcase__image ${captionPosition}' src='' alt=''>
       <p class='card-caption'></p>
     </article>
-  `
+  `;
 }

@@ -5,5 +5,5 @@ export function AppForPreview(captionPosition) {
       <p class='app__name'></p>
       <p class='app__caption ${captionPosition}'></p>
     </article>
-  `
+  `;
 }

@@ -11,5 +11,5 @@ export function NewsList() {
         <p class='item__caption'></p>
       </div>
     </section>
-  `
+  `;
 }
