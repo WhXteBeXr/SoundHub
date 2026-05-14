@@ -1,15 +1,15 @@
 export function NavBar() {
   return `
-    <nav class='nav-bar'>
-      <ul>
-        <li class='nav-item'>
-          <button name=''>Home</button>
+    <nav class='nav'>
+      <ul class="nav__list">
+        <li class='nav__item'>
+          <a href="/" class="nav__link">Home</a>
         </li>
-        <li class='nav-item'>
-          <button name=''>Info</button>
+        <li class='nav__item'>
+          <a href="/" class="nav__link">Info</a>
         </li>
-        <li class='nav-item'>
-          <button name=''>About</button>
+        <li class='nav__item'>
+          <a href="/" class="nav__link">About</a>
         </li>
       </ul>
     </nav>
