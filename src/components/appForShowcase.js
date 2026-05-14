@@ -12,10 +12,12 @@ export function AppForPreview(
   const imageSrc = typeof src === 'string' ? src : src.src;
 
   return `
-    <article class="app">
-      <img class="app__image" src="${imageSrc}" alt="${alt}">
-      <p class="app__name">${appName}</p>
-      <p class="app__caption ${captionPosition}">${appCaption}</p>
+    <article class="preview-app preview-app--${captionPosition}">
+      <div class="preview-app__image-container">
+        <img class="preview-app__image" src="${imageSrc}" alt="${alt}">
+        <p class="preview-app__name">${appName}</p>
+      </div>
+      <p class="preview-app__caption">${appCaption}</p>
     </article>
   `;
 }

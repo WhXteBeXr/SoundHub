@@ -8,30 +8,29 @@ import { Footer } from '@/components/footer.js';
 
 import { PHRASES as motivationPhrases } from '@/data/phrases.js';
 import pepeImage from '@/assets/images/pepe-placeholder.jpg';
+import userAvatar from '@/assets/images/Pfp.jpg'
 
-const cardBottomPosition = 'apps-showcase__card--bottom-caption';
-const cardTopPosition = 'apps-showcase__card--top-caption';
-const appCaptionRightPosition = 'app__caption--right-side-caption';
-const appCaptionLeftPosition = 'app__caption--left-side-caption';
+const elementsNormalOrder = 'normal-order';
+const elementsReverseOrder = 'reversed-order';
 
 export function HomePage() {
   console.info(`Вызвана функция ${HomePage.name}`);
   return `
-    ${Header()}
+    ${Header(userAvatar)}
     
-    <main>
+    <main class="main">
       ${NewsList()} 
       <section class="app-cards">
-        ${Card(cardBottomPosition, 'Random caption for card block', pepeImage)}
-        ${Card(cardTopPosition, 'Random caption for card block', pepeImage)}
-        ${Card(cardBottomPosition, 'Random caption for card block', pepeImage)}
+        ${Card(elementsNormalOrder, 'Random caption for card block', pepeImage)}
+        ${Card(elementsReverseOrder, 'Random caption for card block', pepeImage)}
+        ${Card(elementsNormalOrder, 'Random caption for card block', pepeImage)}
       </section>
       ${SectionDivider(motivationPhrases)}
       
       <section class="apps-preview-block">
-        ${AppForPreview(appCaptionRightPosition, 'Test name', 'Test caption', pepeImage)}
-        ${AppForPreview(appCaptionLeftPosition, 'Test name', 'Test caption', pepeImage)}
-        ${AppForPreview(appCaptionRightPosition, 'Test name', 'Test caption', pepeImage)}
+        ${AppForPreview(elementsNormalOrder, 'Test name', 'Test caption', pepeImage)}
+        ${AppForPreview(elementsReverseOrder, 'Test name', 'Test caption', pepeImage)}
+        ${AppForPreview(elementsNormalOrder, 'Test name', 'Test caption', pepeImage)}
       </section>
       
       ${SectionDivider(motivationPhrases)}

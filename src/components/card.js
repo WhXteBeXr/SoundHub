@@ -11,8 +11,8 @@ export function Card(
   const imageSrc = typeof src === 'string' ? src : src.src;
 
   return `
-    <article class="card">
-      <img class="card__image ${captionPosition}" src="${imageSrc}" alt="${alt}">
+    <article class="card card--${captionPosition}">
+      <img class="card__image" src="${imageSrc}" alt="${alt}">
       <p class="card__caption">${captionText}</p>
     </article>
   `;
