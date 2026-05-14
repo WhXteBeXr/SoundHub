@@ -1,19 +1,13 @@
 import { SectionDivider } from '@/components/sectionDivider.js';
 import { NavBar } from '@/components/navBar.js';
 import { Card } from '@/components/card.js';
+import { Header } from '@/components/header.js';
+import { Footer } from '@/components/footer.js';
 import { PHRASES as motivationPhrases } from '@/data/phrases.js';
 
 export function InfoPage() {
   return `
-    <header>
-      <h1 class=''>SoundHub</h1>
-      ${NavBar()}
-      <div class='account'>
-        <a class='account__image'>
-          <img src='' alt=''>
-        </a>
-      </div>
-    </header>
+    ${Header()}
     
     <main>
       ${SectionDivider(motivationPhrases)}
@@ -29,16 +23,13 @@ export function InfoPage() {
       ${Card()}
       <article class="plugins-information-block information-block"></article>
       ${SectionDivider(motivationPhrases)}
+    
+      <div class='bottom-navigation'>
+        ${NavBar()}
+        <p class='bottom-navigation__caption'></p>
+      </div>
     </main>
     
-    <footer class='footer'>
-      <div class='footer__navigation'>
-        ${NavBar()}
-        <p class='nav-bar__caption'></p>
-      </div>
-      <div class='footer-block'>
-        <div class='footer-content'></div>
-      </div>
-    </footer>
+    ${Footer()}
   `;
 }
