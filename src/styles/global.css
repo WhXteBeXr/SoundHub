@@ -12,7 +12,9 @@ h5,
 h6,
 ol,
 ul,
-li {
+li,
+p,
+div {
   margin: 0;
   padding: 0;
 }
