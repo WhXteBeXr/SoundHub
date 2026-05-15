@@ -1,7 +1,10 @@
-// Точка входа в приложение
+import '@/styles/global.css';
+import '@/styles/variables.css';
+import '@/styles/styles.css';
+import '@/assets/fonts/fonts.css';
 
-import './styles/global.css';
+import { router } from '@/router.js';
 
-import { renderApp } from './app.js';
+window.addEventListener('load', router);
 
-renderApp();
+window.addEventListener('hashchange', router);
