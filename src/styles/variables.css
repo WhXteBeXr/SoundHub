@@ -1,4 +1,35 @@
 :root {
+  --size-s: 1rem;
+  --size-m: 3rem;
+  --size-l: 5rem;
+  --size-xl: 7rem;
+
+  --gap-size-xs: 1rem;
+  --gap-size-s: 1.5rem;
+  --gap-size-m: 3rem;
+  --gap-size-l: 4rem;
+
+  --container-inline-padding: clamp(80px, 10%, 200px);
+  --section-gap: var(--size-m);
+  --card-gap: var(--size-s);
+
+  --color-bg: #0f1115;
+
+  --color-surface: #181b22;
+  --color-surface-light: #222733;
+
+  --color-border: #2f3542;
+
+  --color-text: #f2f3f5;
+  --color-text-muted: #9ba3b4;
+
+  --color-accent: #7c8cff;
+  --color-accent-hover: #9aa7ff;
+
+  --border-accent-color: 2px solid var(--color-accent);
+
+  --shadow-medium: 0 4px 20px rgb(0 0 0 / 0.2);
+
   --border-radius: 25px;
   --border-radius-rounded: 50%;
 }

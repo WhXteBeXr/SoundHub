@@ -8,7 +8,7 @@ import { Footer } from '@/components/footer.js';
 
 import { PHRASES as motivationPhrases } from '@/data/phrases.js';
 import pepeImage from '@/assets/images/pepe-placeholder.jpg';
-import userAvatar from '@/assets/images/Pfp.jpg'
+import userAvatar from '@/assets/images/Pfp.jpg';
 
 const elementsNormalOrder = 'normal-order';
 const elementsReverseOrder = 'reversed-order';
@@ -20,7 +20,7 @@ export function HomePage() {
     
     <main class="main">
       ${NewsList()} 
-      <section class="app-cards">
+      <section class="cards-block">
         ${Card(elementsNormalOrder, 'Random caption for card block', pepeImage)}
         ${Card(elementsReverseOrder, 'Random caption for card block', pepeImage)}
         ${Card(elementsNormalOrder, 'Random caption for card block', pepeImage)}
