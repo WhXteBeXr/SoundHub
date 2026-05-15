@@ -11,7 +11,7 @@ export function Card(
   const imageSrc = typeof src === 'string' ? src : src.src;
 
   return `
-    <article class="card card--${captionPosition}">
+    <article class="card card--${captionPosition} block-cascade-shadows">
       <img class="card__image" src="${imageSrc}" alt="${alt}">
       <p class="card__caption">${captionText}</p>
     </article>

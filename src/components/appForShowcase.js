@@ -17,7 +17,7 @@ export function AppForPreview(
         <img class="preview-app__image" src="${imageSrc}" alt="${alt}">
         <p class="preview-app__name">${appName}</p>
       </div>
-      <p class="preview-app__caption">${appCaption}</p>
+      <p class="preview-app__caption block-cascade-shadows">${appCaption}</p>
     </article>
   `;
 }

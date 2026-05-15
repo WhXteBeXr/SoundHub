@@ -1,21 +1,24 @@
-import { AboutTextBlock } from '@/components/aboutTextBlock.js';
+import { AboutBlock } from '@/components/aboutBlock.js';
 import { SectionDivider } from '@/components/sectionDivider.js';
 import { Footer } from '@/components/footer.js';
 import { Header } from '@/components/header.js';
-import { PHRASES as motivationPhrases } from '@/data/phrases.js';
 
-const aboutTextBlockRightPosition = 'project-info__text--right-side-caption';
-const aboutTextBlockLeftPosition = 'project-info__text--left-side-caption';
+import { PHRASES as motivationPhrases } from '@/data/phrases.js';
+import pepeImage from '@/assets/images/pepe-placeholder.jpg';
+import userAvatar from '@/assets/images/Pfp.jpg';
+
+const normalOrder = 'normal-order';
+const reverseOrder = 'reversed-order';
 
 export function AboutPage() {
   return `
-    ${Header()}
+    ${Header(userAvatar)}
     
     <main>
       ${SectionDivider(motivationPhrases)}
-      ${AboutTextBlock(aboutTextBlockLeftPosition)}
-      ${AboutTextBlock(aboutTextBlockRightPosition)}
-      ${AboutTextBlock(aboutTextBlockLeftPosition)}
+      ${AboutBlock(normalOrder, 'test paragraph 1', 'test paragraph 2', pepeImage)}
+      ${AboutBlock(reverseOrder, 'test paragraph 1', 'test paragraph 2', pepeImage)}
+      ${AboutBlock(normalOrder, 'test paragraph 1', 'test paragraph 2', pepeImage)}
       ${SectionDivider(motivationPhrases)}
     </main>
     

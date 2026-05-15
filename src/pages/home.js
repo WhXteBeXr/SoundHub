@@ -10,8 +10,8 @@ import { PHRASES as motivationPhrases } from '@/data/phrases.js';
 import pepeImage from '@/assets/images/pepe-placeholder.jpg';
 import userAvatar from '@/assets/images/Pfp.jpg';
 
-const elementsNormalOrder = 'normal-order';
-const elementsReverseOrder = 'reversed-order';
+const normalOrder = 'normal-order';
+const reverseOrder = 'reversed-order';
 
 export function HomePage() {
   console.info(`Вызвана функция ${HomePage.name}`);
@@ -21,16 +21,16 @@ export function HomePage() {
     <main class="main">
       ${NewsList()} 
       <section class="cards-block">
-        ${Card(elementsNormalOrder, 'Random caption for card block', pepeImage)}
-        ${Card(elementsReverseOrder, 'Random caption for card block', pepeImage)}
-        ${Card(elementsNormalOrder, 'Random caption for card block', pepeImage)}
+        ${Card(normalOrder, 'Random caption for card block', pepeImage)}
+        ${Card(reverseOrder, 'Random caption for card block', pepeImage)}
+        ${Card(normalOrder, 'Random caption for card block', pepeImage)}
       </section>
       ${SectionDivider(motivationPhrases)}
       
       <section class="apps-preview-block">
-        ${AppForPreview(elementsNormalOrder, 'Test name', 'Test caption', pepeImage)}
-        ${AppForPreview(elementsReverseOrder, 'Test name', 'Test caption', pepeImage)}
-        ${AppForPreview(elementsNormalOrder, 'Test name', 'Test caption', pepeImage)}
+        ${AppForPreview(normalOrder, 'Test name', 'Test caption', pepeImage)}
+        ${AppForPreview(reverseOrder, 'Test name', 'Test caption', pepeImage)}
+        ${AppForPreview(normalOrder, 'Test name', 'Test caption', pepeImage)}
       </section>
       
       ${SectionDivider(motivationPhrases)}

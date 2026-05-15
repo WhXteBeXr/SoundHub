@@ -1,8 +1,23 @@
+@keyframes change-color {
+
+  from {
+    background-color: var(--color-accent);
+  }
+
+  50% {
+    background-color: var(--color-secondary-accent);
+  }
+
+  to {
+    background-color: var(--shadow-accent);
+  }
+}
+
 .page {
   display: flex;
   flex-direction: column;
   min-block-size: 100vh;
-  padding-inline: var(--container-inline-padding);
+  padding: 20px var(--container-inline-padding);
   background-color: var(--color-bg);
   color: var(--color-text);
 }
@@ -12,7 +27,7 @@
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   block-size: var(--size-m);
-  margin-block: var(--size-s);
+  margin-block-end: 2rem;
 }
 
 .header__title {
@@ -74,6 +89,13 @@
   gap: var(--size-m);
 }
 
+.block-cascade-shadows {
+  box-shadow:
+    var(--color-accent) 2px 4px,
+    var(--color-secondary-accent) 4px 6px,
+    var(--shadow-accent) 6px 8px;
+}
+
 .news-list {
   display: flex;
   justify-content: space-around;
@@ -88,7 +110,7 @@
   block-size: 130px;
   overflow: scroll;
   background-color: var(--color-surface-light);
-  border: var(--border-accent-color);
+  border: var(--border-surface-color);
   border-radius: var(--border-radius);
 }
 
@@ -105,8 +127,20 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--color-surface);
-  border: var(--border-accent-color);
+  border: 2px solid var(--color-accent);
   border-radius: var(--border-radius);
+  transition:
+    border 0.3s,
+    transform 0.3s,
+    box-shadow 0.5s,
+    animation 0.5s;
+}
+
+.card:hover {
+  border: var(--border-accent-color);
+  transform: scale(1.03);
+  animation: change-color 6s alternate infinite ease-in-out;
+  box-shadow: none;
 }
 
 .card__image {
@@ -122,6 +156,12 @@
   block-size: 100%;
   min-block-size: 160px;
   padding: var(--size-s);
+}
+
+.focusable-element:focus {
+  outline: 2px solid var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: inset var(--color-accent) 0 0 0 2px;
 }
 
 .card--normal-order .card__image {
@@ -143,6 +183,7 @@
 }
 
 .section-divider {
+  margin-block: var(--size-xs) var(--size-s);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,6 +218,7 @@
   object-fit: cover;
   inline-size: 100%;
   block-size: 100%;
+  border-radius: var(--border-radius);
 }
 
 .preview-app__name {
@@ -184,46 +226,46 @@
   z-index: 1;
   left: 50%;
   bottom: 0.6rem;
+  padding: 0.2rem 3.7rem;
   transform: translateX(-50%);
   background-color: var(--color-surface);
-  padding: 0.2rem 3.7rem;
-  border: var(--border-accent-color);
   border-radius: var(--border-radius);
 }
 
 .preview-app__caption {
   inline-size: 50%;
   padding: var(--size-s);
-  background-color: var(--color-surface);
-  border: var(--border-accent-color);
+  background-color: var(--color-surface-light);
+  /*border: var(--border-accent-color);*/
+  border-radius: var(--border-radius);
 }
 
 .preview-app--normal-order .preview-app__image {
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  /*border-radius: var(--border-radius) 0 0 var(--border-radius);*/
 }
 
 .preview-app--normal-order .preview-app__image-container {
   order: 1;
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  /*border-radius: var(--border-radius) 0 0 var(--border-radius);*/
 }
 
 .preview-app--normal-order .preview-app__caption {
   order: 2;
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  /*border-radius: 0 var(--border-radius) var(--border-radius) 0;*/
 }
 
 .preview-app--reversed-order .preview-app__image {
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  /*border-radius: 0 var(--border-radius) var(--border-radius) 0;*/
 }
 
 .preview-app--reversed-order .preview-app__image-container {
   order: 2;
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  /*border-radius: 0 var(--border-radius) var(--border-radius) 0;*/
 }
 
 .preview-app--reversed-order .preview-app__caption {
   order: 1;
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  /*border-radius: var(--border-radius) 0 0 var(--border-radius);*/
 }
 
 .bottom-navigation {
@@ -242,7 +284,7 @@
 
 .footer {
   background-color: var(--color-surface);
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-radius: var(--border-radius);
   block-size: 200px;
   padding-block: 1rem;
 }
