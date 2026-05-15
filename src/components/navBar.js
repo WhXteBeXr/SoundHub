@@ -3,13 +3,13 @@ export function NavBar() {
     <nav class='nav'>
       <ul class="nav__list">
         <li class='nav__item'>
-          <a href="/" class="nav__link">Home</a>
+          <a href="#/home" class="nav__link">Home</a>
         </li>
         <li class='nav__item'>
-          <a href="/" class="nav__link">Info</a>
+          <a href="#/info" class="nav__link">Info</a>
         </li>
         <li class='nav__item'>
-          <a href="/" class="nav__link">About</a>
+          <a href="#/about" class="nav__link">About</a>
         </li>
       </ul>
     </nav>
