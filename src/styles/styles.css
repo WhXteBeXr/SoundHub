@@ -480,12 +480,14 @@
 }
 
 @media (max-width: 1450px) {
+
   .cards-block {
     padding-inline: 50px;
   }
 }
 
 @media (max-width: 1200px) {
+
   .page {
     padding-inline: 24px;
   }
@@ -530,6 +532,7 @@
 }
 
 @media (max-width: 768px) {
+
   .page {
     padding: 16px 30px;
     text-align: left;
@@ -541,8 +544,8 @@
     grid-template-columns: 180px 1fr;
     grid-template-rows: auto auto;
     grid-template-areas:
-      "title title"
-      "avatar nav";
+      'title title'
+      'avatar nav';
     gap: 20px 24px;
     justify-items: stretch;
     align-items: center;
@@ -695,6 +698,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   html {
     scroll-behavior: auto;
   }

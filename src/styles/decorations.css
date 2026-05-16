@@ -81,13 +81,14 @@
 
 .nav__item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px color-mix(in srgb, var(--color-contrast-accent) 35%, transparent);
+  box-shadow: 0 8px 18px
+    color-mix(in sRGB, var(--color-contrast-accent) 35%, transparent);
 }
 
 .section-divider::after {
   animation-duration: 3s;
   filter: saturate(1.2) brightness(1.08);
-  box-shadow: 0 0 12px color-mix(in srgb, var(--color-accent) 25%, transparent);
+  box-shadow: 0 0 12px color-mix(in sRGB, var(--color-accent) 25%, transparent);
 }
 
 .card {
@@ -100,7 +101,8 @@
 
 .card:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 12px 24px color-mix(in srgb, var(--color-accent) 20%, transparent);
+  box-shadow: 0 12px 24px
+    color-mix(in sRGB, var(--color-accent) 20%, transparent);
 }
 
 .about-block__text-content::before,
@@ -117,11 +119,12 @@
 }
 
 .header__image-container {
-  transition: transform 0.25s ease, filter 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
 }
 
 .header__image-container:hover {
   transform: translateY(-2px) scale(1.01);
   filter: brightness(1.05);
 }
-
