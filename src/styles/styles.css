@@ -131,7 +131,6 @@
   flex-direction: column;
   justify-content: space-around;
   gap: var(--size-m);
-  block-size: 350px;
   padding: var(--size-s) var(--size-l);
   background-color: var(--color-surface);
   border: var(--border-accent-color);
@@ -151,7 +150,7 @@
 }
 
 .about-block {
-  block-size: 500px;
+  block-size: 350px;
   display: flex;
   gap: var(--size-s);
 }
@@ -159,7 +158,7 @@
 .about-block__text-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   flex: 3;
   gap: var(--size-m);
   block-size: 100%;

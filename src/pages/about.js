@@ -3,7 +3,8 @@ import { SectionDivider } from '@/components/sectionDivider.js';
 import { Footer } from '@/components/footer.js';
 import { Header } from '@/components/header.js';
 
-import { PHRASES as motivationPhrases } from '@/data/phrases.js';
+import { MotivationPhrases as motivationPhrases } from '@/data/motivationPhrases.js';
+import { ABOUTPARAGRAPHS as aboutParagraphs} from '@/data/aboutParagraphs.js';
 import pepeImage from '@/assets/images/pepe-placeholder.jpg';
 import userAvatar from '@/assets/images/Pfp.jpg';
 
@@ -18,9 +19,9 @@ export function AboutPage() {
     <main class="main">
       ${SectionDivider(motivationPhrases)}
       <section class="about-section">
-        ${AboutBlock(normalOrder, 'test paragraph 1', 'test paragraph 2', pepeImage)}
-        ${AboutBlock(reverseOrder, 'test paragraph 1', 'test paragraph 2', pepeImage)}
-        ${AboutBlock(normalOrder, 'test paragraph 1', 'test paragraph 2', pepeImage)}
+        ${AboutBlock(normalOrder, aboutParagraphs.reason, aboutParagraphs.helpfulFor, pepeImage)}
+        ${AboutBlock(reverseOrder, aboutParagraphs.siteStructureFirst, aboutParagraphs.siteStructureSecond, pepeImage)}
+        ${AboutBlock(normalOrder, aboutParagraphs.myWishesFirst, aboutParagraphs.myWishesSecond, pepeImage)}
       </section>
       ${SectionDivider(motivationPhrases)}
     </main>
