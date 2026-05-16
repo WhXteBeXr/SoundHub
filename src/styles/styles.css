@@ -20,6 +20,13 @@
   padding: 20px var(--container-inline-padding);
   background-color: var(--color-bg);
   color: var(--color-text);
+  font-family: var(--font-main), sans-serif;
+  font-size: var(--font-main-size);
+  font-weight: var(--font-main-weight);
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .header {
@@ -39,12 +46,18 @@
   border-radius: var(--border-radius);
   border: var(--border-accent-color);
   block-size: 100%;
+  font-family: var(--font-accent), system-ui, sans-serif;
+  font-size: var(--font-h1-size);
+  font-weight: var(--font-bold-weight);
 }
 
 .nav {
   min-inline-size: 300px;
   max-inline-size: 550px;
   inline-size: 100%;
+  font-family: var(--font-accent), system-ui, sans-serif;
+  font-size: var(--font-caption-size);
+  font-weight: var(--font-main-weight);
 }
 
 .nav__list {
@@ -108,6 +121,11 @@
     var(--shadow-accent) 6px 8px;
 }
 
+.highlight-word {
+  font-family: var(--font-accent), system-ui, sans-serif;
+  font-weight: var(--font-bold-weight);
+}
+
 .news-list {
   display: flex;
   justify-content: space-around;
@@ -115,15 +133,28 @@
   padding: 1rem 5rem;
   background-color: var(--color-surface);
   border-radius: var(--border-radius);
+  block-size: 150px;
 }
 
 .news-list__item {
-  flex: 1;
-  block-size: 130px;
-  overflow: scroll;
+  inline-size: 100%;
+  block-size: 100%;
+  overflow-y: scroll;
   background-color: var(--color-surface-light);
   border: var(--border-surface-color);
   border-radius: var(--border-radius);
+}
+
+.news-list__image {
+  flex: 1;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.news-list__caption {
+  padding: var(--size-s);
 }
 
 .info-block {
@@ -131,10 +162,28 @@
   flex-direction: column;
   justify-content: space-around;
   gap: var(--size-m);
-  padding: var(--size-s) var(--size-l);
+  padding: var(--size-s) var(--size-m);
   background-color: var(--color-surface);
   border: var(--border-accent-color);
   border-radius: var(--border-radius);
+}
+
+.info-block__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-s);
+}
+
+.info-block__text-container::after {
+  content: '';
+  display: block;
+  inline-size: 60%;
+  block-size: 2px;
+  margin-inline: auto;
+  margin-top: 0.4rem;
+  border-radius: var(--border-radius);
+  background-color: var(--color-text);
+  opacity: 0.8;
 }
 
 .information-section {
@@ -144,13 +193,12 @@
 }
 
 .about-section {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: repeat(3, clamp(220px, 28vw, 400px));
   gap: var(--size-m);
 }
 
 .about-block {
-  block-size: 350px;
   display: flex;
   gap: var(--size-s);
 }
@@ -162,6 +210,7 @@
   flex: 3;
   gap: var(--size-m);
   block-size: 100%;
+  overflow-y: scroll;
   padding: var(--size-s) var(--size-l);
   background-color: var(--color-surface);
   border: var(--border-accent-color);
@@ -268,6 +317,9 @@
   block-size: 2rem;
   border-radius: var(--border-radius);
   background-color: var(--color-surface);
+  font-family: var(--font-mono), monospace, serif;
+  font-size: var(--font-main-size);
+  font-weight: var(--font-main-weight);
 }
 
 .apps-preview-block {
@@ -283,13 +335,13 @@
   display: flex;
   gap: var(--gap-size-s);
   inline-size: 100%;
+  block-size: clamp(220px, 28vw, 360px);
   border-radius: var(--border-radius);
 }
 
 .preview-app__image-container {
   position: relative;
   inline-size: 90%;
-  block-size: 20rem;
 }
 
 .preview-app__image {
@@ -308,6 +360,9 @@
   transform: translateX(-50%);
   background-color: var(--color-surface);
   border-radius: var(--border-radius);
+  font-family: var(--font-mono), monospace, serif;
+  font-size: var(--font-caption-size);
+  font-weight: var(--font-main-weight);
 }
 
 .preview-app__caption {
@@ -315,6 +370,7 @@
   padding: var(--size-s);
   background-color: var(--color-surface-light);
   border-radius: var(--border-radius);
+  overflow-y: scroll;
 }
 
 .preview-app--normal-order .preview-app__image-container {
@@ -345,6 +401,9 @@
   padding: 0.2rem 1.5rem;
   background-color: var(--color-surface);
   border-radius: var(--border-radius);
+  font-family: var(--font-mono), monospace, serif;
+  font-size: var(--font-caption-size);
+  font-weight: var(--font-main-weight);
 }
 
 .footer {

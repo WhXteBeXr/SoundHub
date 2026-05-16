@@ -34,6 +34,18 @@
   --color-text: var(--white);
   --color-text-muted: var(--muted-white);
 
+  --font-main: 'Exo 2';
+  --font-accent: 'Press Start 2P';
+  --font-mono: 'JetBrains Mono';
+
+  --font-main-size: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --font-caption-size: clamp(0.7rem, 0.76rem + 0.2vw, 0.9rem);
+  --font-h1-size: clamp(1.1rem, 0.9rem + 1vw, 2rem);
+  --font-h2-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+
+  --font-main-weight: normal;
+  --font-bold-weight: bold;
+
   --border-surface-color: 2px solid var(--color-surface);
   --border-accent-color: 2px solid var(--color-accent);
   --border-white-color: 2px solid var(--white);

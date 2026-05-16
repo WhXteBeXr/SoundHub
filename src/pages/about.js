@@ -4,7 +4,7 @@ import { Footer } from '@/components/footer.js';
 import { Header } from '@/components/header.js';
 
 import { MotivationPhrases as motivationPhrases } from '@/data/motivationPhrases.js';
-import { ABOUTPARAGRAPHS as aboutParagraphs} from '@/data/aboutParagraphs.js';
+import { ABOUTPARAGRAPHS as aboutParagraphs } from '@/data/aboutParagraphs.js';
 import pepeImage from '@/assets/images/pepe-placeholder.jpg';
 import userAvatar from '@/assets/images/Pfp.jpg';
 
