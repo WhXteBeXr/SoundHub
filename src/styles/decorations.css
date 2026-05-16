@@ -1,0 +1,48 @@
+@keyframes change-color {
+
+  from {
+    background-color: var(--color-accent);
+  }
+
+  50% {
+    background-color: var(--color-secondary-accent);
+  }
+
+  to {
+    background-color: var(--shadow-accent);
+  }
+}
+
+@keyframes rainbowShift {
+
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.block-cascade-shadows {
+  box-shadow:
+    var(--color-accent) 2px 4px,
+    var(--color-secondary-accent) 4px 6px,
+    var(--shadow-accent) 6px 8px;
+}
+
+.block-contrast-cascade-shadows {
+  box-shadow:
+    var(--color-contrast-accent) 2px 4px,
+    var(--color-contrast-secondary-accent) 4px 6px,
+    var(--shadow-contrast-accent) 6px 8px;
+}
+
+.highlight-word {
+  font-family: var(--font-accent), system-ui, sans-serif;
+  font-weight: var(--font-bold-weight);
+}

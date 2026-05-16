@@ -7,7 +7,7 @@ export function NewsList(images = []) {
   }
 
   return `
-    <section class="news-list block-cascade-shadows">
+    <section class="news-list block-contrast-cascade-shadows">
       <div class="news-list__item">
         <img src="${images[0]}" class="news-list__image" alt="">
         <p class="news-list__caption focusable-element">News text</p>

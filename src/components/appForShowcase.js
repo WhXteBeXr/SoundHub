@@ -4,7 +4,7 @@ export function AppForPreview(
   firstParagraph,
   secondParagraph,
   src,
-  alt = '',
+  alt = ''
 ) {
   if (!src) {
     console.error(`Error while loading card image src: ${src}`);
