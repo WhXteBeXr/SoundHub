@@ -2,7 +2,7 @@ export function Card(
   captionPosition,
   captionText,
   src,
-  alt = 'No image description',
+  alt = 'No image description'
 ) {
   if (!src) {
     console.error(`Error while loading card image src: ${src}`);
@@ -13,7 +13,9 @@ export function Card(
   return `
     <article class="card card--${captionPosition} block-cascade-shadows">
       <img class="card__image" src="${imageSrc}" alt="${alt}">
-      <p class="card__caption">${captionText}</p>
+      <div class="card__caption-container">
+        <p class="card__caption">${captionText}</p>
+      </div>
     </article>
   `;
 }

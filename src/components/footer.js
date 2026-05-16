@@ -1,6 +1,6 @@
 export function Footer() {
   return `
-    <footer class='footer block-cascade-shadows'>
+    <footer class='footer block-contrast-cascade-shadows'>
       <div class='footer-content'>
         <span>SoundHub</span>
         <p>Made by WhXteBeXr with love</p>
