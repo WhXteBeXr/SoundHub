@@ -14,7 +14,7 @@ const normalOrder = 'normal-order';
 const reverseOrder = 'reversed-order';
 
 export function HomePage() {
-  console.info(`Вызвана функция ${HomePage.name}`);
+  console.info(`Запрошена страница ${HomePage.name}`);
   return `
     ${Header(userAvatar)}
     

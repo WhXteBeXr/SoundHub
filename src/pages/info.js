@@ -10,18 +10,22 @@ import pepeImage from '@/assets/images/pepe-placeholder.jpg';
 import userAvatar from '@/assets/images/Pfp.jpg';
 
 const normalOrder = 'normal-order';
+const reverseOrder = 'reversed-order';
 
 export function InfoPage() {
+  console.info(`Запрошена страница ${InfoPage.name}`);
   return `
     ${Header(userAvatar)}
     
-    <main>
+    <main class="main">
       ${SectionDivider(motivationPhrases)}
       <section class="information-section">
         ${TextBlock('test paragraph 1', 'test paragraph 2', 'test paragraph 3')}
-        ${Card(normalOrder, 'Random caption for card block', pepeImage)}
-        ${Card(normalOrder, 'Random caption for card block', pepeImage)}
-        ${Card(normalOrder, 'Random caption for card block', pepeImage)}
+        <div class="cards-block">
+          ${Card(normalOrder, 'Random caption for card block', pepeImage)}
+          ${Card(reverseOrder, 'Random caption for card block', pepeImage)}
+          ${Card(normalOrder, 'Random caption for card block', pepeImage)}
+        </div>
         ${TextBlock('test paragraph 1', 'test paragraph 2', 'test paragraph 3')}
       </section>
       
@@ -29,9 +33,11 @@ export function InfoPage() {
       
       <section class="information-section">
         ${TextBlock('test paragraph 1', 'test paragraph 2', 'test paragraph 3')}
-        ${Card(normalOrder, 'Random caption for card block', pepeImage)}
-        ${Card(normalOrder, 'Random caption for card block', pepeImage)}
-        ${Card(normalOrder, 'Random caption for card block', pepeImage)}
+        <div class="cards-block">
+          ${Card(normalOrder, 'Random caption for card block', pepeImage)}
+          ${Card(reverseOrder, 'Random caption for card block', pepeImage)}
+          ${Card(normalOrder, 'Random caption for card block', pepeImage)}
+        </div>
         ${TextBlock('test paragraph 1', 'test paragraph 2', 'test paragraph 3')}
       </section>
       ${SectionDivider(motivationPhrases)}

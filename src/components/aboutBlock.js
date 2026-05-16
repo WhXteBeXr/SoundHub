@@ -14,7 +14,7 @@ export function AboutBlock(
   return `
     <article class="about-block about-block--${textPosition}">
       <img class="about-block__image" src="${imageSrc}" alt="${alt}">
-      <div class="about-block__text-content">
+      <div class="about-block__text-content block-cascade-shadows">
         <p class="about-block__paragraph">${firstParagraph}</p>
         <p class="about-block__paragraph">${secondParagraph}</p>
       </div>

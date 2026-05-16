@@ -11,14 +11,17 @@ const normalOrder = 'normal-order';
 const reverseOrder = 'reversed-order';
 
 export function AboutPage() {
+  console.info(`Запрошена страница ${AboutPage.name}`);
   return `
     ${Header(userAvatar)}
     
-    <main>
+    <main class="main">
       ${SectionDivider(motivationPhrases)}
-      ${AboutBlock(normalOrder, 'test paragraph 1', 'test paragraph 2', pepeImage)}
-      ${AboutBlock(reverseOrder, 'test paragraph 1', 'test paragraph 2', pepeImage)}
-      ${AboutBlock(normalOrder, 'test paragraph 1', 'test paragraph 2', pepeImage)}
+      <section class="about-section">
+        ${AboutBlock(normalOrder, 'test paragraph 1', 'test paragraph 2', pepeImage)}
+        ${AboutBlock(reverseOrder, 'test paragraph 1', 'test paragraph 2', pepeImage)}
+        ${AboutBlock(normalOrder, 'test paragraph 1', 'test paragraph 2', pepeImage)}
+      </section>
       ${SectionDivider(motivationPhrases)}
     </main>
     
