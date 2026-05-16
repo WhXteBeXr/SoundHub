@@ -196,7 +196,7 @@
 .about-block__text-content:before {
   position: absolute;
   content: '';
-  inset: 20px auto 0 60px;
+  inset: 40px auto 0 60px;
   inline-size: 2px;
   block-size: 0;
   background-color: transparent;
@@ -207,7 +207,7 @@
 }
 
 .about-block:hover .about-block__text-content:before {
-  block-size: 90%;
+  block-size: 80%;
   background-color: var(--color-text);
 }
 
@@ -412,6 +412,7 @@
   font-family: var(--font-mono), monospace, serif;
   font-size: var(--font-caption-size);
   font-weight: var(--font-main-weight);
+  text-align: center;
 }
 
 .preview-app__caption {

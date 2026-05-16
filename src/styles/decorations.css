@@ -46,3 +46,82 @@
   font-family: var(--font-accent), system-ui, sans-serif;
   font-weight: var(--font-bold-weight);
 }
+
+.nav__link,
+.newsletter-popup__button,
+.newsletter-popup__close {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.nav__link:hover {
+  transform: translateY(-1px);
+}
+
+.nav__link:active,
+.newsletter-popup__button:active,
+.newsletter-popup__close:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.nav__link:hover,
+.newsletter-popup__button:hover {
+  filter: brightness(1.08);
+}
+
+.nav__item {
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.nav__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--color-contrast-accent) 35%, transparent);
+}
+
+.section-divider::after {
+  animation-duration: 3s;
+  filter: saturate(1.2) brightness(1.08);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+
+.card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 24px color-mix(in srgb, var(--color-accent) 20%, transparent);
+}
+
+.about-block__text-content::before,
+.card__caption::before {
+  transition:
+    block-size 0.35s ease,
+    background-color 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.about-block:hover .about-block__text-content::before,
+.card:hover .card__caption::before {
+  opacity: 1;
+}
+
+.header__image-container {
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.header__image-container:hover {
+  transform: translateY(-2px) scale(1.01);
+  filter: brightness(1.05);
+}
+
